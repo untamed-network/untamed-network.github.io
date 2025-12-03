@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Meta -->
+<meta name="description" content="Redirecting…">
+<meta property="theme-color" content="#5865F2">
+
+<script>
+    const home = "https://untamed-network.github.io";
+
+    function goHome() {
+        window.location.href = home;
+    }
+
+    // Try redirect immediately
+    goHome();
+
+    // Retry redirect every second in case the first one fails
+    const retry = setInterval(goHome, 1000);
+
+    // Stop retrying after 8 seconds (optional)
+    setTimeout(() => clearInterval(retry), 8000);
+</script>
+
+<style>
+    body {
+        background: #5865F2;
+        color: white;
+        font-family: Arial, sans-serif;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        background: white;
+        color: #5865F2;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+    <h1>Redirecting…</h1>
+    <p>If this page doesn't redirect automatically, tap the button below.</p>
+    <button onclick="goHome()">Go Home</button>
+</body>
+</html>

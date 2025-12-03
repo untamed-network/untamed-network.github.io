@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Discord Blue Meta Tags -->
+<meta name="title" content="Untamed Earth — Redirecting…">
+<meta name="description" content="Redirecting you to Untamed Earth.">
+<meta property="theme-color" content="#5865F2">
+
+<!-- Redirect Retry Script -->
+<script>
+    const target = "https://your-redirect-url.com";
+
+    function redirectNow() {
+        window.location.href = target;
+    }
+
+    // 1. First attempt immediately
+    redirectNow();
+
+    // 2. Retry every 1 second if it fails
+    const retry = setInterval(() => {
+        redirectNow();
+    }, 1000);
+
+    // Optional: Stop retrying after 10 seconds
+    setTimeout(() => {
+        clearInterval(retry);
+    }, 10000);
+</script>
+
+<style>
+    body {
+        background: #5865F2;
+        color: white;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+</style>
+</head>
+
+<body>
+    <h1>Redirecting…</h1>
+    <p>If your browser didn't redirect, please wait or tap the button below.</p>
+    <button onclick="redirectNow()" style="
+        padding: 12px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        background: white;
+        color: #5865F2;
+        font-weight: bold;
+        cursor: pointer;">
+        Tap to Continue
+    </button>
+</body>
+</html>
